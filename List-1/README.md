@@ -85,7 +85,7 @@ Updated data: Joao Silva, $ 5600.00
 Fazer um programa para ler os dados de N figuras (N fornecido pelo usuário), e depois mostrar as áreas destas figuras na mesma ordem em que foram digitadas.
 Obs: Shape é uma classe abstract.
 <div>
-    <img height="400" width="300" src="exercicio4.png">
+    <img height="400" width="300" src="./imgs/exerc4.png">
 </div>
 
 ### Exemplo de entrada:
@@ -120,7 +120,7 @@ SHAPE AREAS:
 ### **Exercício 5:** 
 Faça um programa que ler os dados de um pedido com N itens (N fornecido pelo usuário). Depois, mostrar um sumário do pedido conforme exemplo (próxima página). Nota: o instante do pedido deve ser o instante do sistema: new Date()
 <div>
-    <img height="400" width="800" src="exercicio5.png">
+    <img height="400" width="800" src="imgs/exerc5.png">
 </div>
 
 ### Exemplo de Entrada:
