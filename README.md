@@ -83,6 +83,7 @@ Updated data: Joao Silva, $ 5600.00
 
 ### **Exercício 4:** 
 Fazer um programa para ler os dados de N figuras (N fornecido pelo usuário), e depois mostrar as áreas destas figuras na mesma ordem em que foram digitadas.
+Obs: Shape é uma classe abstract.
 <div>
     <img height="400" width="300" src="exercicio4.png">
 </div>
