@@ -166,3 +166,10 @@ TV, $1000.00, Quantity: 1, Subtotal: $1000.00
 Mouse, $40.00, Quantity: 2, Subtotal: $80.00 
 Total price: $1080.00
 ```
+
+### **Exercício 6:**
+Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa física e jurídica, caracterizados aqui por *CPF* E *CNPJ*, respectivamente. Consulte páginas na internet para saber a fórmula de cálculo para cada um deles. As entradas sempre serão no formato *XXX.XXX.XXX-XX* para CPF e *XX.XXX. XXX/0001-XX* para CNPJ.
+
+<div>
+    <img src="imgs/exerc6.png">
+</div>
