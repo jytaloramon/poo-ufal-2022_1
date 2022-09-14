@@ -197,9 +197,9 @@ SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 <div>
     <img height="400" width="800" src="imgs/exerc5.png">
 </div>
-<div>
-    <img src="imgs/exerc5_1.png">
-</div>
+
+### Exemplo main
+
 ### Exemplo de Entrada:
 **Enter cliente data:** 
 
