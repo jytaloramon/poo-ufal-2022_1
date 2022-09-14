@@ -5,12 +5,31 @@
 
 ## Repositório da disciplina de POO - UFAL 2022.1
 
-### - Obs: Todas as questões precisa criar um Main e instância os objetos e chamar os métodos.
+### - Obs: Todas as questões precisa instânciar os objetos.
 ### - Obs: As letras, números e símbolos em ```NEGRITO``` são os valores que vão digitar no programa.
 
 ---
 ### **Exercício 1:** 
 Faça um programa para ler a cotação do dólar, e depois um valor em dólares a ser comprado por uma pessoa em reais. Informar quantos reais a pessoa vai pagar pelos dólares, considerando ainda que a pessoa terá que pagar 6% de IOF sobre o valor em dólar. Criar uma classe CurrencyConverter (Conversor de moeda) para ser responsável pelos cálculos
+
+### Exemplo main:
+```java
+public class Program {
+       public static void main(String[] args) {
+              Locale.setDefault(Locale.US);
+              Scanner sc = new Scanner(System.in);
+
+              System.out.print("What is the dollar price? ");
+              double dollarPrice = sc.nextDouble();
+              System.out.print("How many dollars will be bought? ");
+              double amount = sc.nextDouble();
+              
+              double result = CurrencyConverter.dollarToReal(amount, dollarPrice);
+              System.out.printf("Amount to be paid in reais = %.2f%n", result);
+              sc.close();
+       }
+}
+```
 
 ### Exemplo de entrada:
 What is the dollar price?```3.10```
@@ -34,6 +53,26 @@ __+__ Area(): double
 __+__ Perimeter(): double
 __+__ Diagonal(): double
 
+### Exemplo main:
+```java
+public class Program {
+       public static void main(String[] args) {
+              Locale.setDefault(Locale.US);
+              Scanner sc = new Scanner(System.in);
+
+              Rectangle rect = new Rectangle();
+
+              System.out.println("Enter rectangle width and height:");
+              rect.width = sc.nextDouble();
+              rect.height = sc.nextDouble();
+
+              System.out.printf("AREA = %.2f%n", rect.area());
+              System.out.printf("PERIMETER = %.2f%n", rect.perimeter());
+              System.out.printf("DIAGONAL = %.2f%n", rect.diagonal());
+              sc.close();
+       }
+}
+```
 
 ### Exemplo de entrada:
 
@@ -61,6 +100,36 @@ __-__ Tax: double
 ---|
 __+__ NetSalary(): double
 __+__ IncreaseSalary(percentagem: double): void
+
+### Exemplo main:
+```java
+public class Program {
+       public static void main(String[] args) {
+              Locale.setDefault(Locale.US);
+              Scanner sc = new Scanner(System.in);
+
+              Employee emp = new Employee();
+
+              System.out.print("Name: ");
+              emp.name = sc.nextLine();
+              System.out.print("Gross salary: ");
+              emp.grossSalary = sc.nextDouble();
+              System.out.print("Tax: ");
+              emp.tax = sc.nextDouble();
+
+              System.out.println();
+              System.out.println("Employee: " + emp);
+              System.out.println();
+              System.out.print("Which percentage to increase salary? ");
+              double percentage = sc.nextDouble();
+              emp.increaseSalary(percentage);
+
+              System.out.println();
+              System.out.println("Updated data: " + emp);
+              sc.close();
+       }
+}
+```
 
 ### Exemplo de entrada:
 
