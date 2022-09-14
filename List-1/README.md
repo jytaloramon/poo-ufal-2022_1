@@ -173,3 +173,22 @@ Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa f�
 <div>
     <img src="imgs/exerc6.png">
 </div>
+
+### **Exercício 7:**
+
+Você foi contratado para desenvolver um Player de Vídeo para uma BigTech. Dentre os problemas na construção deste software está o requisito de que o player deve suporta vídeos independentes da fonte/origem. A questão aqui é, empresas diferentes codificam os binários dos vídeos de forma diferente. Como mostrado no diagrama UML abaixo, os bits da classe *YoutubeVideo* são representados na forma de um array de inteiros, já *FaceVideo* é um array de booleanos. Sua tarefa é codificar este software atendo o requisito mencionado.
+
+O formato de conversão segue a seguinte lógica:
+- YoutubeVideo: basta obter cada valor(inteiro) do array e mapeá-lo para um caractere utilizando a tabela ASCII (existe método em Java para isso).
+
+- FaceVideo: o array (de bits) tem exatamente 184 itens, esses elementos devem ser agrupados 8-8, formando assim 23 grupos/caracteres. Esse agrupamento representa na realidade um valor binário - só que no lugar de 1 e 0 é True e False. Tomando os 8 primeiros itens do array como exemplo:
+(false, true, false, true, false, false, false, false) = (0b 01010000) = 80. Agora é só mapear usando a tabela ASCII.
+
+<div>
+    <img src="imgs/exerc7.png">
+</div>
+
+<br>
+
+**Para alcançar o objetivo sua missão é apresentar/imprimir a mensagem “Parabéns, vc conseguiu.” a partir dos “bits” providos pelas classes “YoutubeVideo” e “FaceVideo”.** [Ir para o código base](./code/projectvideo/)
+
