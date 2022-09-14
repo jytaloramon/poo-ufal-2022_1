@@ -5,8 +5,8 @@
 
 ## Repositório da disciplina de POO - UFAL 2022.1
 
-
-- Obs: As letras, números e símbolos em ```NEGRITO``` são os valores que vão digitar no programa.
+### - Obs: Todas as questões precisa criar um Main e instância os objetos e chamar os métodos.
+### - Obs: As letras, números e símbolos em ```NEGRITO``` são os valores que vão digitar no programa.
 
 ---
 ### **Exercício 1:** 
@@ -167,6 +167,7 @@ Mouse, $40.00, Quantity: 2, Subtotal: $80.00
 Total price: $1080.00
 ```
 
+---
 ### **Exercício 6:**
 Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa física e jurídica, caracterizados aqui por *CPF* E *CNPJ*, respectivamente. Consulte páginas na internet para saber a fórmula de cálculo para cada um deles. As entradas sempre serão no formato *XXX.XXX.XXX-XX* para CPF e *XX.XXX. XXX/0001-XX* para CNPJ.
 
@@ -174,6 +175,7 @@ Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa f�
     <img src="imgs/exerc6.png">
 </div>
 
+---
 ### **Exercício 7:**
 
 Você foi contratado para desenvolver um Player de Vídeo para uma BigTech. Dentre os problemas na construção deste software está o requisito de que o player deve suporta vídeos independentes da fonte/origem. A questão aqui é, empresas diferentes codificam os binários dos vídeos de forma diferente. Como mostrado no diagrama UML abaixo, os bits da classe *YoutubeVideo* são representados na forma de um array de inteiros, já *FaceVideo* é um array de booleanos. Sua tarefa é codificar este software atendo o requisito mencionado.
