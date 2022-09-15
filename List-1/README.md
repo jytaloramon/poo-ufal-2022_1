@@ -352,7 +352,7 @@ Sua atividade é desenvolver um software para realizar esse cálculo. Além diss
 |     Campo      | Restrição                                         |
 | :------------: | :------------------------------------------------ |
 | Nome completo  | Ter pelo menos dois nomes<br>Máximo 50 caracteres |
-|   Matrícula    | Ter 8 recebidocaracteres<br>Iniciar com 201              |
+|   Matrícula    | Ter 8 recebidocaracteres<br>Iniciar com 201       |
 | notas do aluno | 5 notas no total                                  |
 
 Sobre a nota semestral: a menor nota do aluno será descartada para fins de calculo, que consiste de uma média aritmética da 4 notas restante.
@@ -360,7 +360,7 @@ Sobre a nota semestral: a menor nota do aluno será descartada para fins de calc
 
 ##### Nota:
 
-|      Camrecebido         |
+|      Campo      | Restrição          |
 | :-------------: | :----------------- |
 |      Valor      | 0 <= valor <= 10   |
 | Nome do Assunto | Não pode ser vázio |
