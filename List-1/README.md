@@ -347,7 +347,7 @@ Em relação a nota semestral:
 
 Sua atividade é desenvolver um software para realizar esse cálculo. Além disso, o seu sistema deve-se armazenar algumas outras informações.
 
-##### Alunorecebido:
+##### Aluno:
 
 |     Campo      | Restrição                                         |
 | :------------: | :------------------------------------------------ |
