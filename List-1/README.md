@@ -238,11 +238,18 @@ Total price: $1080.00
 
 ---
 ### **Exercício 6:**
-Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa física e jurídica, caracterizados aqui por *CPF* E *CNPJ*, respectivamente. Consulte páginas na internet para saber a fórmula de cálculo para cada um deles. As entradas sempre serão no formato *XXX.XXX.XXX-XX* para CPF e *XX.XXX. XXX/0001-XX* para CNPJ.
+
+Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa física e jurídica, caracterizados aqui por *CPF* E *CNPJ*, respectivamente. Consulte páginas na internet para saber a fórmula de cálculo para cada um deles. As entradas estarão sempre no formato *XXX.XXX.XXX-XX* para CPF e *XX.XXX. XXX/0001-XX* para CNPJ.
 
 <div>
     <img src="imgs/exerc6.png">
 </div>
+
+#### Saída:
+
+```markdown
+Crie o método main e instancie alguns objetos do tipo Person->PersonIndividual/PersonLegal e valide através do Validator.
+```
 
 ---
 
@@ -258,11 +265,10 @@ O formato de conversão segue a seguinte lógica:
 
 <div>
     <img src="imgs/exerc7.png">
+    <i>Esboço do diagrama UML do projeto.</i>
 </div>
 
 <br>
-
-**Para alcançar o objetivo sua missão é apresentar/imprimir a mensagem “Parabéns, vc conseguiu.” a partir dos “bits” providos pelas classes “YoutubeVideo” e “FaceVideo”.
 
 ```Java
 // FaceVideo.java
@@ -321,27 +327,55 @@ public class YoutubeVideo {
 }
 ```
 
+#### Saída:
+```markdown
+Para alcançar o objetivo sua missão é apresentar/imprimir a mensagem “Parabéns, vc conseguiu.” a partir dos “bits” providos pelas classes “YoutubeVideo” e “FaceVideo”.
+```
+----
+
 ### **Exercício 8:**
 
-O prof. Thiago neste período lecionará a disciplina de Programação Orientada a Objeto(POO). Devido a experiências ruins com alunos que não estudavam o suficiente – ou não estudava – ele pensou em uma nova fórmula para calcular as notas dos alunos (modo tudo ou nada). Em relação a nota final:
+O prof. Thiago neste período lecionará a disciplina de Programação Orientada a Objeto(POO). Devido a experiências ruins com alunos que não estudavam o suficiente – ou não estudava – ele pensou em uma nova fórmula para calcular as notas dos alunos (modo tudo ou nada). 
+
+- Nota semestral: notas obtidas pelo aluno 
+- Nota final: notas obtida a partir da **nota semestral** aplicando o **modo tudo ou nada**
+
+
+Em relação a nota semestral:
 
 - Nota menor que 6 recebe uma penalização de 25%.
 - Maior ou igual a 6 e menor que 7 se torna 7.
 - Maior ou igual a 7 e menor ou igual a 8 recebe uma bonificação de 15% (Para melhorar o coeficiente).
 - Qualquer outra nota automaticamente se torna 10.
 
-Sua atividade é desenvolver um software para realizar esse cálculo. Entretanto, não é só isso. No seu sistema deve-se armazenar algumas outras informações.
+Sua atividade é desenvolver um software para realizar esse cálculo. Além disso, o seu sistema deve-se armazenar algumas outras informações.
 
-Aluno:
-- Nome completo.
-- Matrícula.
-- E suas notas (5 no total).
-- Sobre a nota final: a menor nota do aluno será descartada para fins de calculo, que consiste de uma média aritmética da 4 notas restante.
-  
-Nota(s):
-- Valor numérico correspondente a nota.
-- Nome do assunto da prova.
+##### Aluno:
 
-Obs: encapsule as propriedades, faça a validade dos valores e utilize interface.
+|     Campo      | Restrição                                         |
+| :------------: | :------------------------------------------------ |
+| Nome completo  | Ter pelo menos dois nomes<br>Máximo 50 caracteres |
+|   Matrícula    | Ter 8 caracteres<br>Iniciar com 201              |
+| notas do aluno | 5 notas no total                                  |
 
-Instancie alguns Alunos (no mínimo 5) e suas respectivas notas e imprima sua matrícula, nome, notas (as 5), a "média final" e a "média final" com o novo método de cálculo.
+Sobre a nota semestral: a menor nota do aluno será descartada para fins de calculo, que consiste de uma média aritmética da 4 notas restante.
+
+
+##### Nota:
+
+|      Campo      | Restrição          |
+| :-------------: | :----------------- |
+|      Valor      | 0 <= valor <= 10   |
+| Nome do Assunto | Não pode ser vázio |
+
+
+Cuidados: encapsule as propriedades e faça as validaçções dos valores "setados" nos campos.
+
+Obs.: utilize interfaces.
+
+#### Saída:
+
+```markdown
+Crie o método main e instancie alguns objetos do tipo Aluno (no mínimo 5) com suas respectivas notas.
+Para cada um imprima: matrícula, nome, notas obtidas (valor e nome do assunto), "nota semestral" e a "nota final".
+```
