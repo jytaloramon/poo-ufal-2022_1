@@ -338,7 +338,6 @@ O prof. Thiago neste período lecionará a disciplina de Programação Orientada
 - Nota semestral: notas obtidas pelo aluno 
 - Nota final: notas obtida a partir da **nota semestral** aplicando o **modo tudo ou nada**
 
-
 Em relação a nota semestral:
 
 - Nota menor que 6 recebe uma penalização de 25%.
@@ -348,12 +347,12 @@ Em relação a nota semestral:
 
 Sua atividade é desenvolver um software para realizar esse cálculo. Além disso, o seu sistema deve-se armazenar algumas outras informações.
 
-##### Aluno:
+##### Alunorecebido:
 
 |     Campo      | Restrição                                         |
 | :------------: | :------------------------------------------------ |
 | Nome completo  | Ter pelo menos dois nomes<br>Máximo 50 caracteres |
-|   Matrícula    | Ter 8 caracteres<br>Iniciar com 201              |
+|   Matrícula    | Ter 8 recebidocaracteres<br>Iniciar com 201              |
 | notas do aluno | 5 notas no total                                  |
 
 Sobre a nota semestral: a menor nota do aluno será descartada para fins de calculo, que consiste de uma média aritmética da 4 notas restante.
@@ -361,7 +360,7 @@ Sobre a nota semestral: a menor nota do aluno será descartada para fins de calc
 
 ##### Nota:
 
-|      Campo      | Restrição          |
+|      Camrecebido         |
 | :-------------: | :----------------- |
 |      Valor      | 0 <= valor <= 10   |
 | Nome do Assunto | Não pode ser vázio |
@@ -369,11 +368,47 @@ Sobre a nota semestral: a menor nota do aluno será descartada para fins de calc
 
 Cuidados: encapsule as propriedades e faça as validaçções dos valores "setados" nos campos.
 
-Obs.: utilize interfaces.
+Obs.1: utilize interfaces.
+
+Obs.2: pode ser necessário atualizar dados após sua criação.
 
 #### Saída:
 
 ```markdown
 Crie o método main e instancie alguns objetos do tipo Aluno (no mínimo 5) com suas respectivas notas.
 Para cada um imprima: matrícula, nome, notas obtidas (valor e nome do assunto), "nota semestral" e a "nota final".
+```
+
+### **Exercício 9:**
+
+Nessa atividade sua tarefa será criar uma *lib* de ordenação.
+
+A exigência principal é que haja uma classe chamada de *SortMachine* que receberá uma lista – você pode escolher qual o tipo será essa lista (int, string, etc) – idealmente genérica – e um o método de ordenação (Quick, Merge, etc). Em *SortMachine* haverá um método nomeado *runSort* que retornará a lista ordenada.
+
+Obs.1: você deverá implementar pelos menos dois algoritmos de ordenação diferentes.
+
+#### Saída
+
+```markdown
+Crie o método *main*, uma lista de itens, instancie *SortMachine* e suas dependências e execute a ordenação.
+```
+
+### **Exercício 10:**
+
+José é dono de uma rede de empresas do ramo alimentícios que além de vender produtos de terceiros a também cria seus próprios produtos. Atualmente, o principal meio de comunicação da empresa é o e-mail, entretanto, José tem receio que alguma BigTech vaze/roube informações sobre os seus produtos. Diante disso, ele está te contratando para construir um sistema de e-mail próprio para a empresa.
+
+Problemas/Requisitos:
+
+1. Um e-mail é uma mensagem de texto com no máximo 2500 caracteres e possui um usuário de origem e um de destino válidos, além de um título e uma data de envio.
+2. Um Funcionário possui nome, cargo, matrícula e um e-mail. O e-mail deve ser único dentro do sistema da empresa. Além disso, cada Funcionário possui uma lista de e-mails enviados e uma lista de recebidos.
+3. Para facilitar a localização José requisita que haja uma lista com todos os Funcionários.
+4. Crie uma unidade responsável por enviar e-mails entre os Funcionários.
+
+#### Saída
+
+```markdown
+No método *main:
+- instancie os objetos e suas dependências.
+- Efetue o envio de e-mails entre Funcionário.
+- Imprima a lista dos Funcionários: nome, matrícula, cargo, e-mails enviados (conteúdo e nome do destinatário) e e-mails recebidos (conteúdo e nome do remetente).
 ```
