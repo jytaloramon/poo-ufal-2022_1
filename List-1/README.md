@@ -1,12 +1,6 @@
-# Programação Orientada a Objetos - UFAL - 2022_1
+# Lista de Exercício 1
 
-![JAVA](https://custom-icon-badges.herokuapp.com/badge/Java-C63842?style=for-the-badge&logo=icons8-javaf&logoColor=black)
-![GITHUB](https://img.shields.io/badge/Programação_Orientada_a_Objetos-black?style=for-the-badge&logo=GitHub&logoColor=white)
-
-## Repositório da disciplina de POO - UFAL 2022.1
-
-### - Obs: Todas as questões precisa instânciar os objetos.
-### - Obs: As letras, números e símbolos em ```NEGRITO``` são os valores que vão digitar no programa.
+## Assunto: conceitos basilares 
 
 ---
 ### **Exercício 1:** 
@@ -251,6 +245,7 @@ Seguindo o diagrama UML abaixo, crie um software para validar dados de pessoa f�
 </div>
 
 ---
+
 ### **Exercício 7:**
 
 Você foi contratado para desenvolver um Player de Vídeo para uma BigTech. Dentre os problemas na construção deste software está o requisito de que o player deve suporta vídeos independentes da fonte/origem. A questão aqui é, empresas diferentes codificam os binários dos vídeos de forma diferente. Como mostrado no diagrama UML abaixo, os bits da classe *YoutubeVideo* são representados na forma de um array de inteiros, já *FaceVideo* é um array de booleanos. Sua tarefa é codificar este software atendo o requisito mencionado.
@@ -267,5 +262,86 @@ O formato de conversão segue a seguinte lógica:
 
 <br>
 
-**Para alcançar o objetivo sua missão é apresentar/imprimir a mensagem “Parabéns, vc conseguiu.” a partir dos “bits” providos pelas classes “YoutubeVideo” e “FaceVideo”.** [Ir para o código base](./code/projectvideo/)
+**Para alcançar o objetivo sua missão é apresentar/imprimir a mensagem “Parabéns, vc conseguiu.” a partir dos “bits” providos pelas classes “YoutubeVideo” e “FaceVideo”.
 
+```Java
+// FaceVideo.java
+
+package face;
+
+public class FaceVideo {
+
+    private final boolean[] bitsFace;
+
+    public FaceVideo() {
+       bitsFace = new boolean[] {
+              false, true, false, true, false, false, false, false, false, true, true, false, false, false, false,
+              true, false, true, true, true, false, false, true, false, false, true, true, false, false, false, false,
+              true, false, true, true, false, false, false, true, false, true, true, true, false, true, false, false,
+              true, false, true, true, false, true, true, true, false, false, true, true, true, false, false, true,
+              true, false, false, true, false, true, true, false, false, false, false, true, false, false, false,
+              false, false, false, true, true, true, false, true, true, false, false, true, true, false, false, false,
+              true, true, false, false, true, false, false, false, false, false, false, true, true, false, false,
+              false, true, true, false, true, true, false, true, true, true, true, false, true, true, false, true,
+              true, true, false, false, true, true, true, false, false, true, true, false, true, true, false, false,
+              true, false, true, false, true, true, false, false, true, true, true, false, true, true, true, false,
+              true, false, true, false, true, true, false, true, false, false, true, false, true, true, true, false,
+              true, false, true, false, false, true, false, true, true, true, false
+       };
+    }
+
+    public boolean[] getBitsFace() {
+        return bitsFace;
+    }
+
+}
+```
+
+```Java
+// YoutubeVideo.java
+
+package youtube;
+
+public class YoutubeVideo {
+
+    private final int[] bits;
+
+    public YoutubeVideo() {
+       bits = new int[] {
+              80, 97, 114, 97, 98, 233, 110, 115, 44,
+              32, 118, 99, 32, 99, 111, 110, 115, 101,
+              103, 117, 105, 117, 46
+        };
+    }
+
+    public int[] getBits() {
+       return bits;
+    }
+
+}
+```
+
+### **Exercício 8:**
+
+O prof. Thiago neste período lecionará a disciplina de Programação Orientada a Objeto(POO). Devido a experiências ruins com alunos que não estudavam o suficiente – ou não estudava – ele pensou em uma nova fórmula para calcular as notas dos alunos (modo tudo ou nada). Em relação a nota final:
+
+- Nota menor que 6 recebe uma penalização de 25%.
+- Maior ou igual a 6 e menor que 7 se torna 7.
+- Maior ou igual a 7 e menor ou igual a 8 recebe uma bonificação de 15% (Para melhorar o coeficiente).
+- Qualquer outra nota automaticamente se torna 10.
+
+Sua atividade é desenvolver um software para realizar esse cálculo. Entretanto, não é só isso. No seu sistema deve-se armazenar algumas outras informações.
+
+Aluno:
+- Nome completo.
+- Matrícula.
+- E suas notas (5 no total).
+- Sobre a nota final: a menor nota do aluno será descartada para fins de calculo, que consiste de uma média aritmética da 4 notas restante.
+  
+Nota(s):
+- Valor numérico correspondente a nota.
+- Nome do assunto da prova.
+
+Obs: encapsule as propriedades, faça a validade dos valores e utilize interface.
+
+Instancie alguns Alunos (no mínimo 5) e suas respectivas notas e imprima sua matrícula, nome, notas (as 5), a "média final" e a "média final" com o novo método de cálculo.
