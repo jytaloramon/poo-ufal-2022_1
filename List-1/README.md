@@ -1,5 +1,24 @@
-# Lista de Exercício 1
+# Programação Orientada a Objetos - UFAL - 2022_1
 
+![JAVA](https://custom-icon-badges.herokuapp.com/badge/Java-C63842?style=for-the-badge&logo=icons8-javaf&logoColor=black)
+![GITHUB](https://img.shields.io/badge/Programação_Orientada_a_Objetos-black?style=for-the-badge&logo=GitHub&logoColor=white)
+
+----
+
+## Lista de Exercício 1
+
+**Assunto**: Fundamentos da Orientação a Objeto
+
+**Data de Entrega**: n/d.
+
+**Por**: Franklyn Roberto, Ramon Almeida e Thiago Sales
+
+**Apoio:**
+- [Diagramas UML](./UML/)
+- Resolução: n/d
+- Repositório: <https://github.com/jytaloramon/poo-ufal-2022_1/tree/main/List-1>
+----
+<br>
 
 ### **Exercício 1:** 
 Faça um programa para ler a cotação do dólar, e depois leia o valor em dólares a ser comprado. A saída será quantos reais a pessoa pagará pelos dólares, considerando ainda que a pessoa pagará 6% de IOF sobre o valor em dólar. Criar uma classe CurrencyConverter (Conversor de moeda) para ser responsável pelos cálculos.
