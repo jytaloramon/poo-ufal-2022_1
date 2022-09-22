@@ -14,7 +14,7 @@ public class PersonLegal extends Person {
         // Removendo qualquer coisa diferente de número
         String c = this.cnpj.replaceAll("[^0-9]", "");
 
-        if (this.cnpj.length() != 18)
+        if (c.length() != 14)
             return false;
 
         int sumS1 = sumCharInterval(c, new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 }),
