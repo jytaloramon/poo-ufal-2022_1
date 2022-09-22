@@ -10,10 +10,12 @@ public class PersonLegal extends Person {
 
     @Override
     public boolean isValid() {
+
+        // Removendo qualquer coisa diferente de número
+        String c = this.cnpj.replaceAll("[^0-9]", "");
+
         if (this.cnpj.length() != 18)
             return false;
-
-        String c = this.cnpj.replace(".", "").replace("-", "").replace("/", "");
 
         int sumS1 = sumCharInterval(c, new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 }),
                 r1 = sumS1 % 11, d1 = r1 < 2 ? 0 : 11 - r1;

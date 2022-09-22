@@ -10,10 +10,12 @@ public class PersonIndividual extends Person {
 
     @Override
     public boolean isValid() {
-        if (this.cpf.length() != 14)
-            return false;
+        
+        // Removendo qualquer coisa diferente de número
+        String c = this.cpf.replaceAll("[^0-9]", "");
 
-        String c = this.cpf.replace(".", "").replace("-", "");
+        if (c.length() != 11)
+            return false;
 
         int sumS1 = sumCharInterval(c, 10),
                 r1 = sumS1 % 11, d1 = r1 < 2 ? 0 : 11 - r1;
