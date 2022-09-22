@@ -5,10 +5,12 @@ import mail.BoxEmail;
 import mail.Email;
 import mail.EmailForward;
 import message.IMessageForward;
+import repository.EmployeeRepository;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
+        // Criação de funcionários e suas respectivas caixas de e-mails
         Employee employee1 = new Employee("2000", "Ramon", "RH");
         BoxEmail boxEmail1 = new BoxEmail("ramon@ufal.br", employee1);
         employee1.setBoxEmail(boxEmail1);
@@ -25,26 +27,34 @@ public class App {
         BoxEmail boxEmail4 = new BoxEmail("carlos@ufal.br", employee4);
         employee4.setBoxEmail(boxEmail4);
 
-        ArrayList<Employee> employees = new ArrayList<>();
-        employees.add(employee1);
-        employees.add(employee2);
-        employees.add(employee3);
-        employees.add(employee4);
+        EmployeeRepository.getInstance().insert(employee1.getCode(), employee1);
+        EmployeeRepository.getInstance().insert(employee2.getCode(), employee2);
+        EmployeeRepository.getInstance().insert(employee3.getCode(), employee3);
+        EmployeeRepository.getInstance().insert(employee4.getCode(), employee4);
 
+
+        // Criando e enviando e-mails
         ArrayList<Email> emails = new ArrayList<>();
         emails.add(new Email("Teste - Texto 1", "Teste: Texto 1 do conteúdo",
-                employees.get(0).getBoxEmail(), employees.get(1).getBoxEmail()));
+                EmployeeRepository.getInstance().getByCode("2000").getBoxEmail(),
+                EmployeeRepository.getInstance().getByCode("2001").getBoxEmail()));
+
         emails.add(new Email("Teste - Texto 2", "Teste: Texto 2 do conteúdo",
-                employees.get(0).getBoxEmail(), employees.get(2).getBoxEmail()));
+                EmployeeRepository.getInstance().getByCode("2000").getBoxEmail(),
+                EmployeeRepository.getInstance().getByCode("2002").getBoxEmail()));
+
         emails.add(new Email("Teste - Texto 3", "Teste: Texto 3 do conteúdo",
-                employees.get(2).getBoxEmail(), employees.get(3).getBoxEmail()));
+                EmployeeRepository.getInstance().getByCode("2002").getBoxEmail(),
+                EmployeeRepository.getInstance().getByCode("2003").getBoxEmail()));
 
         IMessageForward<Email> forwardMessage = new EmailForward();
 
         for (Email email : emails)
             forwardMessage.forward(email, email.getSender(), email.getRecipient());
 
-        for (Employee e : employees) {
+
+        // Saída
+        for (Employee e : EmployeeRepository.getInstance().getAll()) {
             System.out.println(e.getName() + " ( " + e.getCode() + " ) [ " + e.getOccupation() + " ]\n");
 
             System.out.println("- E-mail Enviados:");
