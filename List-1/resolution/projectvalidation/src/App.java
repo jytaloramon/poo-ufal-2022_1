@@ -14,6 +14,8 @@ public class App {
                 new PersonIndividual("944.243.912-05"),
                 new PersonLegal("44.334.862/0001-85"),
                 new PersonIndividual("111.444.777.35"),
+                new PersonIndividual("111.111.111.11"),
+                new PersonLegal("00.000.000/0000-00"),
         };
 
         System.out.println("------ Validations ------");
