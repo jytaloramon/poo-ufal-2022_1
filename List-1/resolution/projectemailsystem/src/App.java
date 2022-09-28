@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import business.Employee;
 import mail.BoxEmail;
 import mail.Email;
-import mail.EmailForward;
-import message.IMessageForward;
+import messageforward.EmailForward;
+import messageforward.IMessageForward;
 import repository.EmployeeRepository;
 
 public class App {
@@ -32,7 +32,6 @@ public class App {
         EmployeeRepository.getInstance().insert(employee3.getCode(), employee3);
         EmployeeRepository.getInstance().insert(employee4.getCode(), employee4);
 
-
         // Criando e enviando e-mails
         ArrayList<Email> emails = new ArrayList<>();
         emails.add(new Email("Teste - Texto 1", "Teste: Texto 1 do conteúdo",
@@ -47,11 +46,10 @@ public class App {
                 EmployeeRepository.getInstance().getByCode("2002").getBoxEmail(),
                 EmployeeRepository.getInstance().getByCode("2003").getBoxEmail()));
 
-        IMessageForward<Email> forwardMessage = new EmailForward();
+        IMessageForward forwardMessage = new EmailForward();
 
         for (Email email : emails)
             forwardMessage.forward(email, email.getSender(), email.getRecipient());
-
 
         // Saída
         for (Employee e : EmployeeRepository.getInstance().getAll()) {

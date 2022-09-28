@@ -3,10 +3,10 @@ package mail;
 import java.util.ArrayList;
 
 import business.Employee;
-import message.IBoxMsgReceived;
-import message.IBoxMsgSent;
+import messageforward.IBoxMsgReceived;
+import messageforward.IBoxMsgSent;
 
-public class BoxEmail implements IBoxMsgSent<Email>, IBoxMsgReceived<Email> {
+public class BoxEmail implements IBoxMsgSent, IBoxMsgReceived {
 
     private final String addr;
 
@@ -40,13 +40,14 @@ public class BoxEmail implements IBoxMsgSent<Email>, IBoxMsgReceived<Email> {
     }
 
     @Override
-    public void pushMsgSent(Email email) {
-        emailSent.add(email);
+    public void pushMsgReceived(Email email) {
+        emailReceived.add(email);
     }
 
     @Override
-    public void pushMsgReceived(Email email) {
-        emailReceived.add(email);
+    public void pushMsgSent(Email email) {
+        emailSent.add(email);
+
     }
 
 }
